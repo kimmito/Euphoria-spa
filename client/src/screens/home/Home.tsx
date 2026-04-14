@@ -1,6 +1,4 @@
-import type { FC } from "react";
-
-const Home: FC = () => {
+const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <h1 className="text-4xl font-bold mb-4">Добро пожаловать в Euphoria SPA!</h1>

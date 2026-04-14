@@ -1,6 +1,4 @@
-import type { FC } from 'react'
-
-const Profile: FC = () => {
+const Profile = () => {
 	return <div>Профиль</div>
 }
 
