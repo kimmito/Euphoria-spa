@@ -1,16 +1,13 @@
+import { AppRouter } from '@navigation/AppRouter'
+import { appRoutes } from '@navigation/routes.config'
+import { useRouteTitle } from '@navigation/useRouteTitle'
+
 import './global.css'
-import { Navigate, Route, Routes } from 'react-router';
-import { appRoutes } from './navigation/route-config';
 
 function App() {
-  return(
-    <Routes>
-      {appRoutes.map(({path, component: Component}) => (
-        <Route key={path} path={path} element={<Component />}/>
-      ))}
-      <Route path="*" element={<Navigate replace to='/not-found' />} />
-    </Routes>
-  )
+	useRouteTitle(appRoutes)
+
+	return <AppRouter />
 }
 
 export default App
