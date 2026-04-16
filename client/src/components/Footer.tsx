@@ -6,8 +6,8 @@ import { IoIosMail } from 'react-icons/io'
 const Footer = () => {
 	return (
 		<footer className='bg-gray-800 text-white flex w-full justify-center py-10 gap-20'>
-			<div className='w-1/5'>
-				<p className='text-xl tracking-wide text-gray-400'>
+			<div className='w-1/5 flex items-center'>
+				<p className='text-[14px] tracking-wide text-gray-400 '>
 					&copy; 2026 THRILL. Все права защищены. <br />
 					Цены на нашем сайте не являются публичной офертой, актуальные цены
 					можно узнать при записи.
@@ -15,11 +15,11 @@ const Footer = () => {
 			</div>
 
 			<div>
-				<Row gutter={[16, 24]} className='font-semibold'>
+				<Row gutter={[16, 16]} className='font-semibold'>
 					<Col span={6}>
 						<a
 							href='#'
-							className='text-white/60! decoration-0! inline-block text-xl hover:text-white!'
+							className='text-white/60! decoration-0! inline-block text-[14px] hover:text-white!'
 						>
 							Брови
 						</a>
@@ -27,7 +27,7 @@ const Footer = () => {
 					<Col span={6}>
 						<a
 							href='#'
-							className='text-white/60! decoration-0! inline-block text-xl hover:text-white!'
+							className='text-white/60! decoration-0! inline-block text-[14px] hover:text-white!'
 						>
 							Наши работы
 						</a>
@@ -35,7 +35,7 @@ const Footer = () => {
 					<Col span={6}>
 						<a
 							href='#'
-							className='text-white/60! decoration-0! inline-block text-xl hover:text-white!'
+							className='text-white/60! decoration-0! inline-block text-[14px] hover:text-white!'
 						>
 							Прайс
 						</a>
@@ -43,7 +43,7 @@ const Footer = () => {
 					<Col span={6}>
 						<a
 							href='#'
-							className='text-white/60! decoration-0! inline-block text-xl hover:text-white!'
+							className='text-white/60! decoration-0! inline-block text-[14px] hover:text-white!'
 						>
 							Контакты
 						</a>
@@ -52,7 +52,7 @@ const Footer = () => {
 					<Col span={6}>
 						<a
 							href='#'
-							className='text-white/60! decoration-0! inline-block text-xl hover:text-white!'
+							className='text-white/60! decoration-0! inline-block text-[14px] hover:text-white!'
 						>
 							Маникюр
 						</a>
@@ -60,7 +60,7 @@ const Footer = () => {
 					<Col span={6}>
 						<a
 							href='#'
-							className='text-white/60! decoration-0! inline-block text-xl hover:text-white!'
+							className='text-white/60! decoration-0! inline-block text-[14px] hover:text-white!'
 						>
 							Фотогаллерея
 						</a>
@@ -70,7 +70,7 @@ const Footer = () => {
 					<Col span={6}>
 						<a
 							href='#'
-							className='text-white/60! decoration-0! inline-block text-xl hover:text-white!'
+							className='text-white/60! decoration-0! inline-block text-[14px] hover:text-white!'
 						>
 							Педикюр
 						</a>
