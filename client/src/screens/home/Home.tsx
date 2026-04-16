@@ -51,7 +51,7 @@ const Home = () => {
 					</ul>
 				</nav>
 				<h2 className='text-2xl'>Салон красоты в Краснодаре</h2>
-				<h1 className='text-6xl font-semibold'>Euphoria SPA</h1>
+				<h1 className='text-6xl font-title font-semibold uppercase'>Thrill</h1>
 				<ul className='flex mt-6 justify-center text-lg [&>li]:after:content-["|"] [&>li]:after:mx-4 [&>li]:last:after:content-[""]'>
 					<li>маникюр</li>
 					<li>педикюр</li>
