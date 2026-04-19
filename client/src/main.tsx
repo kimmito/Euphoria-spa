@@ -1,13 +1,18 @@
+import 'antd/dist/antd.css'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
+import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router'
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+import App from './App.tsx'
+import { store } from './store/store'
 
-  </StrictMode>,
+createRoot(document.getElementById('root')!).render(
+	<StrictMode>
+		<Provider store={store}>
+			<BrowserRouter>
+				<App />
+			</BrowserRouter>
+		</Provider>
+	</StrictMode>
 )
