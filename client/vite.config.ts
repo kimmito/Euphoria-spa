@@ -1,7 +1,7 @@
 import babel from '@rolldown/plugin-babel'
 import tailwindcss from '@tailwindcss/vite'
 import react, { reactCompilerPreset } from '@vitejs/plugin-react'
-import { URL, fileURLToPath } from 'node:url'
+import path from 'path'
 import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
@@ -13,12 +13,10 @@ export default defineConfig({
 	],
 	resolve: {
 		alias: {
-			'@': fileURLToPath(new URL('./src', import.meta.url)),
-			'@components': fileURLToPath(
-				new URL('./src/components', import.meta.url)
-			),
-			'@screens': fileURLToPath(new URL('./src/screens', import.meta.url)),
-			'@navigation': fileURLToPath(new URL('./src/navigation', import.meta.url))
+			'@': path.resolve(__dirname, './src'),
+			'@components': path.resolve(__dirname, './src/components'),
+			'@screens': path.resolve(__dirname, './src/screens'),
+			'@navigation': path.resolve(__dirname, './src/navigation')
 		}
 	}
 })
