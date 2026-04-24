@@ -1,4 +1,4 @@
-# Euphoria SPA
+# THRILL SPA
 
 Fullstack-проект для салона красоты.
 
