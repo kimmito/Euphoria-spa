@@ -1,10 +1,11 @@
-import { Button, Col, Row } from 'antd'
+import { Col, Row } from 'antd'
 import { useContext } from 'react'
 import { AiFillInstagram } from 'react-icons/ai'
 import { FaTelegramPlane, FaVk } from 'react-icons/fa'
 import { IoIosMail } from 'react-icons/io'
 import { useDispatch } from 'react-redux'
 
+import { AppButton } from '@/components/AppButton'
 import { ServicesRefContext } from '@/contexts/servicesRefContext'
 import { services } from '@/data/services'
 import { setCategory, setService } from '@/features/priceTabs/priceTabsSlice'
@@ -53,9 +54,9 @@ const Footer = () => {
 		}
 	]
 	return (
-		<footer className='site-footer bg-gray-800 text-white flex w-full justify-center py-10 gap-20 px-4'>
+		<footer className='site-footer flex w-full justify-center gap-20 bg-base px-4 py-10 text-copy'>
 			<div className='w-1/5 flex items-center'>
-				<p className='text-[14px] tracking-wide text-gray-400 '>
+				<p className='text-[14px] tracking-wide text-copy/60 '>
 					&copy; 2026 THRILL. Все права защищены. <br />
 					Цены на нашем сайте не являются публичной офертой, актуальные цены
 					можно узнать при записи.
@@ -67,11 +68,9 @@ const Footer = () => {
 					{footerItems.map(item => (
 						<Col key={item.key} span={item.span}>
 							{item.label ? (
-								<Button
-									type='link'
-									variant='link'
-									size='medium'
-									className='p-0 text-white/60 decoration-0 inline-block text-[16px] hover:text-white'
+								<AppButton
+									appVariant='link'
+									className='inline-block text-[16px]'
 									onClick={
 										item.serviceIndex !== undefined
 											? () =>
@@ -83,7 +82,7 @@ const Footer = () => {
 									}
 								>
 									{item.label}
-								</Button>
+								</AppButton>
 							) : null}
 						</Col>
 					))}
@@ -92,25 +91,25 @@ const Footer = () => {
 			<div>
 				<div className='flex gap-3 bottom-1 mb-2 relative'>
 					{social.map(s => (
-						<Button
+						<AppButton
 							key={s.key}
-							type='text'
 							href={s.href}
 							target='_blank'
 							rel='noopener noreferrer'
 							icon={s.icon}
-							className='rounded-full! bg-white! text-black/50 hover:text-primary!'
+							appVariant='icon'
+							className='rounded-full'
 						/>
 					))}
 				</div>
 				<div>
-					<Button
-						type='text'
+					<AppButton
 						href='https://telegram.com'
 						target='_blank'
 						rel='noopener noreferrer'
 						icon={<IoIosMail size={20} className='relative top-0.5' />}
-						className='rounded-full! bg-white! text-black/50 hover:text-primary!'
+						appVariant='icon'
+						className='rounded-full'
 					/>
 				</div>
 			</div>
