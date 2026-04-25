@@ -30,6 +30,7 @@
 
 	html {
 		scroll-behavior: smooth;
+		overflow-x: clip;
 	}
 
 	body {
@@ -38,6 +39,7 @@
 		color: var(--color-copy);
 		font-family: var(--font-body);
 		border-color: var(--color-line);
+		overflow-x: clip;
 	}
 
 	a {

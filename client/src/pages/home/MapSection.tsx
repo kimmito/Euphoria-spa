@@ -1,7 +1,7 @@
 import { FaCalendarCheck, FaPhoneAlt } from 'react-icons/fa'
 import { IoMdMailOpen } from 'react-icons/io'
 
-const Map = () => {
+const MapSection = () => {
 	return (
 		<section className='flex flex-col overflow-hidden rounded-card shadow-lg shadow-black/20 lg:flex-row'>
 			<div className='flex w-full flex-col justify-center gap-1 bg-panel p-10 pl-8 text-copy lg:w-1/2 lg:pl-20'>
@@ -38,4 +38,4 @@ const Map = () => {
 	)
 }
 
-export default Map
+export default MapSection
