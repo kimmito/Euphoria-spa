@@ -1,7 +1,7 @@
 import { AiFillInstagram } from 'react-icons/ai'
 import { FaPhoneAlt, FaTelegramPlane, FaVk } from 'react-icons/fa'
 
-import { AppButton } from './AppButton'
+import { AppButton } from './ui/AppButton'
 
 const socialLinks = [
 	{

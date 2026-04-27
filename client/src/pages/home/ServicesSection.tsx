@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 
-import { AppButton } from '@/components/AppButton'
+import { AppButton } from '@/components/ui/AppButton'
 
 import { categories } from '@/data/categories'
 import { useServiceConnectorLine } from '@/pages/home/hooks/useServiceConnectorLine'
@@ -48,7 +48,7 @@ export const ServicesSection = () => {
 	return (
 		<section
 			id='services'
-			className='relative mt-16 mb-100 before:absolute before:inset-0 before:bg-[url("/src/assets/images/group1.png")] before:bg-contain before:bg-position-[right_top_3rem] before:bg-no-repeat before:content-[""] before:opacity-30'
+			className='relative mt-16 before:absolute before:inset-0 before:bg-[url("/src/assets/images/group1.png")] before:bg-contain before:bg-position-[right_top_3rem] before:bg-no-repeat before:content-[""] before:opacity-80 before:mix-blend-overlay'
 		>
 			<div ref={sectionRef} className='relative max-w-400 mx-auto px-4'>
 				<h2 className='text-[#E8E8E8] uppercase font-bold text-8xl text-end mb-26'>
@@ -84,29 +84,26 @@ export const ServicesSection = () => {
 				<div id='services-price' ref={priceRef} className='mt-30'>
 					<table className='w-1/2 mb-18 ml-10 border-collapse [&_td]:border-b [&_td]:border-line/35 [&_td]:py-5 [&_td:last-child]:pl-8 [&_td:last-child]:text-right [&_tr:last-child_td]:border-b-0'>
 						<tbody>
-						<tr>
-							<td className='text-2xl max-w-100'>
-								Мужской маникюр блаблабалблабла балблаблабалблаблаб
-								алблаблабалблабла балблаблабал блаблабалблаблабалблаблабал
-							</td>
-							<td className='text-[32px] font-bold text-center'>1500₽</td>
-						</tr>
-						<tr>
-							<td className='text-2xl max-w-100'>Мужской хуй</td>
-							<td className='text-[32px] font-bold text-center'>2000р</td>
-						</tr>
-						<tr>
-							<td className='text-2xl max-w-100'>Мужской Пенис</td>
-							<td className='text-[32px] font-bold text-center'>2000Р</td>
-						</tr>
-						<tr>
-							<td className='text-2xl max-w-100'>Мужской Писюн</td>
-							<td className='text-[32px] font-bold text-center'>2000 р</td>
-						</tr>
-						<tr>
-							<td className='text-2xl max-w-100'>Женский хуй</td>
-							<td className='text-[32px] font-bold text-center'>2000 ₽</td>
-						</tr>
+							<tr>
+								<td className='text-2xl max-w-100'>Маникюр</td>
+								<td className='text-[32px] font-bold text-center'>1500₽</td>
+							</tr>
+							<tr>
+								<td className='text-2xl max-w-100'>Маникюр</td>
+								<td className='text-[32px] font-bold text-center'>2000р</td>
+							</tr>
+							<tr>
+								<td className='text-2xl max-w-100'>Маникюр</td>
+								<td className='text-[32px] font-bold text-center'>2000Р</td>
+							</tr>
+							<tr>
+								<td className='text-2xl max-w-100'>Маникюр</td>
+								<td className='text-[32px] font-bold text-center'>2000 р</td>
+							</tr>
+							<tr>
+								<td className='text-2xl max-w-100'>Маникюр</td>
+								<td className='text-[32px] font-bold text-center'>2000 ₽</td>
+							</tr>
 						</tbody>
 					</table>
 					<div className='flex flex-row gap-3 ml-10 w-1/2 *:flex *:px-20 *:py-6 *:text-2xl'>

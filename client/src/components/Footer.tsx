@@ -4,24 +4,44 @@ import { FaTelegramPlane, FaVk } from 'react-icons/fa'
 import { IoIosMail } from 'react-icons/io'
 import { useLocation, useNavigate } from 'react-router'
 
-import { AppButton } from '@/components/AppButton'
+import { AppButton } from '@/components/ui/AppButton'
 
 import { categories } from '@/data/categories'
 
 const staticFooterItems = [
-	{ key: 's0', label: categories[0].name, categoryId: categories[0].id, span: 6 },
+	{
+		key: 's0',
+		label: categories[0].name,
+		categoryId: categories[0].id,
+		span: 6
+	},
 	{ key: 'works', label: 'Наши работы', span: 6 },
 	{ key: 'price', label: 'Прайс', hash: 'services-price', span: 6 },
 	{ key: 'contacts', label: 'Контакты', span: 6 },
 
-	{ key: 's1', label: categories[1].name, categoryId: categories[1].id, span: 6 },
+	{
+		key: 's1',
+		label: categories[1].name,
+		categoryId: categories[1].id,
+		span: 6
+	},
 	{ key: 'gallery', label: 'Фотогалерея', span: 6 },
 	{ key: 'empty-12', label: null, span: 12 },
 
-	{ key: 's2', label: categories[2].name, categoryId: categories[2].id, span: 6 },
+	{
+		key: 's2',
+		label: categories[2].name,
+		categoryId: categories[2].id,
+		span: 6
+	},
 	{ key: 'empty-18', label: null, span: 18 },
 
-	{ key: 's3', label: categories[3].name, categoryId: categories[3].id, span: 6 }
+	{
+		key: 's3',
+		label: categories[3].name,
+		categoryId: categories[3].id,
+		span: 6
+	}
 ]
 
 const Footer = () => {
@@ -75,10 +95,11 @@ const Footer = () => {
 									className='inline-block text-[16px]'
 									onClick={
 										item.categoryId
-											? () => scrollToServices(`services-price-${item.categoryId}`)
+											? () =>
+													scrollToServices(`services-price-${item.categoryId}`)
 											: item.hash
 												? () => scrollToServices(item.hash)
-											: undefined
+												: undefined
 									}
 								>
 									{item.label}

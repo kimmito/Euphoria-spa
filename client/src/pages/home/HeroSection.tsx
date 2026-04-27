@@ -1,7 +1,7 @@
 import type { RefObject } from 'react'
 import { useNavigate } from 'react-router'
 
-import { AppButton } from '@/components/AppButton'
+import { AppButton } from '@/components/ui/AppButton'
 
 import heroImage from '@/assets/images/hero.jpg'
 

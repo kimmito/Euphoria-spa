@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router'
 
 import Footer from './Footer'
-import Grainient from './Gradient'
 import Header from './Header'
+import Grainient from './ui/Gradient'
 
 export const Layout = () => {
 	return (
