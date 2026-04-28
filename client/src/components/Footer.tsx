@@ -15,9 +15,9 @@ const staticFooterItems = [
 		categoryId: categories[0].id,
 		span: 6
 	},
-	{ key: 'works', label: 'Наши работы', span: 6 },
+	{ key: 'works', label: 'Наши работы', span: 6, href: '#portfolio' },
 	{ key: 'price', label: 'Прайс', hash: 'services-price', span: 6 },
-	{ key: 'contacts', label: 'Контакты', span: 6 },
+	{ key: 'contacts', label: 'Контакты', span: 6, href: '#map' },
 
 	{
 		key: 's1',
@@ -25,8 +25,7 @@ const staticFooterItems = [
 		categoryId: categories[1].id,
 		span: 6
 	},
-	{ key: 'gallery', label: 'Фотогалерея', span: 6 },
-	{ key: 'empty-12', label: null, span: 12 },
+	{ key: 'empty-18-0', label: null, span: 18 },
 
 	{
 		key: 's2',
@@ -34,7 +33,7 @@ const staticFooterItems = [
 		categoryId: categories[2].id,
 		span: 6
 	},
-	{ key: 'empty-18', label: null, span: 18 },
+	{ key: 'empty-18-1', label: null, span: 18 },
 
 	{
 		key: 's3',
@@ -93,6 +92,7 @@ const Footer = () => {
 								<AppButton
 									appVariant='link'
 									className='inline-block text-[16px]'
+									href={item.href ? item.href : undefined}
 									onClick={
 										item.categoryId
 											? () =>
@@ -138,3 +138,4 @@ const Footer = () => {
 	)
 }
 export default Footer
+

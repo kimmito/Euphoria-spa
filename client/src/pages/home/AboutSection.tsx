@@ -1,6 +1,6 @@
 const AboutSection = () => {
 	return (
-		<section className='flex flex-row mt-10 items-center justify-center'>
+		<section className='flex flex-row mt-10 items-center justify-center' id='about'>
 			<div className="relative flex flex-1 h-270 overflow-hidden before:absolute before:inset-0 before:bg-[url('/src/assets/images/brush.png')] before:bg-cover before:bg-center before:opacity-70 before:mix-blend-color-dodge before:content-['']">
 				<div className='relative z-10 flex flex-row select-none'>
 					<p className=' font-title text-[190px] -rotate-90  text-[#17101f] uppercase'>

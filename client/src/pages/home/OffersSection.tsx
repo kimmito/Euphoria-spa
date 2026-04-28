@@ -2,7 +2,7 @@ import thrillFrame from '@/assets/svg/thrill.svg'
 
 const OffersSection = () => {
 	return (
-		<section className='relative my-32 px-4 overflow-visible'>
+		<section className='relative my-32 px-4 overflow-visible' id='offers'>
       
 			<div className='relative mx-auto min-h-180 max-w-420 p-[12%] lg:min-h-230'>
         <h2 className='inline-block text-8xl font-bold relative bottom-70 z-1'>Скидки на <br />повторные <br />посещения</h2>

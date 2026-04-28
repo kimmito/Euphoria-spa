@@ -6,11 +6,11 @@ import { portfolioNailsData } from '@/data/portfolio/portfolio-nails-data'
 
 const PortfolioSection = () => {
 	return (
-		<section>
+		<section id='portfolio'>
 			<h2 className='text-8xl font-bold text-left my-16 ml-50 uppercase'>
 				Портфолио
 			</h2>
-			<div className='relative'>
+			<div id='gallery' className='relative'>
 				<CurvedLoop items={portfolioNailsData} direction='left' />
 				<p className='pointer-events-none uppercase overflow-hidden text-nowrap mix-blend-overlay select-none text-[250px] font-title text-center absolute z-1 top-17 -left-20'>
 					nailsnailsnailsnails
@@ -33,3 +33,4 @@ const PortfolioSection = () => {
 }
 
 export default PortfolioSection
+

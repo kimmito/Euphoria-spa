@@ -13,20 +13,20 @@ export type HeroSectionProps = {
 
 export const HeroSection = () => {
 	const links = [
-		{ href: '#', label: 'О нас' },
-		{ href: '#', label: 'Услуги' },
-		{ href: '#', label: 'Портфолио' },
-		{ href: '#', label: 'Контакты' }
+		{ href: '#about', label: 'О нас' },
+		{ href: '#services', label: 'Услуги' },
+		{ href: '#portfolio', label: 'Портфолио' },
+		{ href: '#map', label: 'Контакты' }
 	]
 	const navigate = useNavigate()
 	return (
-		<section className='flex h-[92vh] max-w-375 mx-auto px-4 mt-10 items-center justify-between gap-20'>
+		<section className='flex h-[92vh] max-w-375 mx-auto px-4 mt-10 items-center justify-between gap-20' id='home'>
 			<div className='flex w-1/3 mx-20 text-center items-center justify-center flex-col '>
 				<nav className='w-full mb-8'>
 					<ul className='flex justify-center gap-10 mb-10 w-full'>
 						{links.map(link => (
 							<li key={link.label}>
-								<AppButton appVariant='outline' className='text-[16px]! p-5!'>
+								<AppButton appVariant='outline' className='text-[16px]! p-5!' href={link.href}>
 									{link.label}
 								</AppButton>
 							</li>
