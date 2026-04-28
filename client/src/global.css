@@ -14,6 +14,10 @@
 	--color-button-hover: #3b3658;
 	--color-button-hover-text: #414141;
 	--color-icon: #5e4f80;
+	--color-scrollbar-track: #241d36;
+	--color-scrollbar-thumb: #786a99;
+	--color-scrollbar-thumb-hover: #8f7eb7;
+	--color-scrollbar-thumb-active: #ffe476;
 
 	--font-title: 'Sekuya', sans-serif;
 	--font-body: 'Arsenal SC', sans-serif;
@@ -31,6 +35,8 @@
 	html {
 		scroll-behavior: smooth;
 		overflow-x: clip;
+		scrollbar-width: thin;
+		scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
 	}
 
 	body {
@@ -52,6 +58,29 @@
 	textarea,
 	select {
 		font-family: var(--font-body);
+	}
+
+	::-webkit-scrollbar {
+		width: 12px;
+		height: 12px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: var(--color-scrollbar-track);
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: var(--color-scrollbar-thumb);
+		border-radius: 999px;
+		border: 3px solid var(--color-scrollbar-track);
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--color-scrollbar-thumb-hover);
+	}
+
+	::-webkit-scrollbar-thumb:active {
+		background: var(--color-scrollbar-thumb-active);
 	}
 }
 

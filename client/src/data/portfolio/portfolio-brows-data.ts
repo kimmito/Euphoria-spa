@@ -21,11 +21,35 @@ export const portfolioBrowsData = [
 		text: ''
 	},
 	{
-		image: brows03,
+		image: brows01,
 		text: ''
 	},
 	{
 		image: brows02,
+		text: ''
+	},
+	{
+		image: brows03,
+		text: ''
+	},
+	{
+		image: brows04,
+		text: ''
+	},
+	{
+		image: brows01,
+		text: ''
+	},
+	{
+		image: brows02,
+		text: ''
+	},
+	{
+		image: brows03,
+		text: ''
+	},
+	{
+		image: brows04,
 		text: ''
 	}
 ]
