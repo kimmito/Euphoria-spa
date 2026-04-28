@@ -5,7 +5,8 @@ import path from 'path'
 import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+	base: mode === 'production' ? '/THRILL-SPA/' : '/',
 	plugins: [
 		react(),
 		tailwindcss(),
@@ -19,4 +20,4 @@ export default defineConfig({
 			'@navigation': path.resolve(__dirname, './src/navigation')
 		}
 	}
-})
+}))
