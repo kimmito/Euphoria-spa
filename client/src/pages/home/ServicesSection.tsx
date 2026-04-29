@@ -48,10 +48,10 @@ export const ServicesSection = () => {
 	return (
 		<section
 			id='services'
-			className='relative mt-16 before:absolute before:inset-0 before:bg-[url("/src/assets/images/group1.png")] before:bg-contain before:bg-position-[right_top_3rem] before:bg-no-repeat before:content-[""] before:opacity-80 before:mix-blend-overlay'
+			className='relative mt-16 before:absolute before:inset-0 before:bg-[url("/src/assets/images/group1.png")] before:overflow-visible before:pb-120 before:-mb-120 before:bg-position-[right_top_3rem] before:bg-no-repeat before:content-[""] before:opacity-80 before:mix-blend-overlay'
 		>
 			<div ref={sectionRef} className='relative max-w-400 mx-auto px-4'>
-				<h2 className='text-[#E8E8E8] uppercase font-bold text-8xl text-end mb-26'>
+				<h2 className='text-head uppercase font-bold text-8xl text-end mb-26'>
 					Услуги
 				</h2>
 				<div
@@ -74,7 +74,7 @@ export const ServicesSection = () => {
 								appVariant={
 									selectedCategory === category.id ? 'active' : 'primary'
 								}
-								className='px-20 py-6 text-2xl! hover:bg-transparent hover:text-accent! hover:border-accent hover:opacity-75'
+								className='px-20 text-head py-6 text-2xl! hover:bg-transparent hover:text-accent! hover:border-accent hover:opacity-75'
 							>
 								{category.name}
 							</AppButton>
@@ -86,19 +86,19 @@ export const ServicesSection = () => {
 						<tbody>
 							<tr>
 								<td className='text-2xl max-w-100'>Маникюр</td>
-								<td className='text-[32px] font-bold text-center'>1500₽</td>
+								<td className='text-[32px] font-bold text-center'>1500 ₽</td>
 							</tr>
 							<tr>
 								<td className='text-2xl max-w-100'>Маникюр</td>
-								<td className='text-[32px] font-bold text-center'>2000р</td>
+								<td className='text-[32px] font-bold text-center'>2000 ₽</td>
 							</tr>
 							<tr>
 								<td className='text-2xl max-w-100'>Маникюр</td>
-								<td className='text-[32px] font-bold text-center'>2000Р</td>
+								<td className='text-[32px] font-bold text-center'>2000 ₽</td>
 							</tr>
 							<tr>
 								<td className='text-2xl max-w-100'>Маникюр</td>
-								<td className='text-[32px] font-bold text-center'>2000 р</td>
+								<td className='text-[32px] font-bold text-center'>2000 ₽</td>
 							</tr>
 							<tr>
 								<td className='text-2xl max-w-100'>Маникюр</td>

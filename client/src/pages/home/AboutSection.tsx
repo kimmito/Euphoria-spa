@@ -20,7 +20,7 @@ const AboutSection = () => {
 
 			<div className='flex flex-1 bg-panel h-195'>
 				<div className='max-w-5/6 ml-20 mt-20'>
-					<h2 className='uppercase font-bold text-[64px] text-[#E8E8E8] mb-16'>
+					<h2 className='uppercase font-bold text-[64px] text-head mb-16'>
 						о нас
 					</h2>
 					<div className="[&>p]: text-title [&>p]:text-copy [&>p]:mb-6 [&>p]:text-2xl max-w-md">
