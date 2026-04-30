@@ -45,7 +45,7 @@ const OffersCarousel = ({
 	}
 
 	return (
-		<div>
+		<div className='relative'>
 			<Carousel
 				ref={carouselRef}
 				accessibility={false}
@@ -65,7 +65,7 @@ const OffersCarousel = ({
 				))}
 			</Carousel>
 
-			<div className='flex justify-between'>
+			<div className='flex justify-between absolute w-full px-20 bottom-10'>
 				<AppButton
 					aria-label='Предыдущее предложение'
 					appVariant='icon'

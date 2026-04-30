@@ -9,7 +9,7 @@ type GiftCertificateSlideProps = {
 
 const GiftCertificateSlide = ({ offer }: GiftCertificateSlideProps) => {
 	return (
-		<div className='mx-4'>
+		<div className=''>
 			<div className='flex justify-around'>
 				{offer.items.map((item) => (
 					<GlareHover
@@ -32,7 +32,7 @@ const GiftCertificateSlide = ({ offer }: GiftCertificateSlideProps) => {
 				{offer.description2 && <p className='mt-4 text-lg'>{offer.description2}</p>}
 			</div>
 
-			<div className='mx-auto mt-10 w-max'>
+			<div className='mx-auto mt-22 w-max'>
 				<AppButton
 					appVariant='primary'
 					aria-label='Купить подарочный сертификат'
