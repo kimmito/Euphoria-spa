@@ -6,6 +6,7 @@ import OffersSection from './offersSection/OffersSection'
 import PortfolioSection from './PortfolioSection'
 import { ServicesSection } from './ServicesSection'
 import MapSection from '@/pages/home/MapSection'
+import StaffSection from './StaffSection'
 
 const Home = () => {
 	return (
@@ -16,6 +17,7 @@ const Home = () => {
 
 			<ServicesSection />
 			<OffersSection />
+			<StaffSection />
 			<ScrollVelocity texts={['THRILL', 'THRILL', 'THRILL']} />
 			<PortfolioSection />
 			<MapSection />
