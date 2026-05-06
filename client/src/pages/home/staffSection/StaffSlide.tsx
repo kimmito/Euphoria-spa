@@ -20,19 +20,28 @@ export const StaffSlide = ({
 	instanceRef,
 	staff
 }: StaffSlideProps) => {
+	const shouldDuplicateStaff = staff.length > 3 && staff.length < 6
+	const sliderStaff = shouldDuplicateStaff ? [...staff, ...staff] : staff
 	const activePerson = staff[currentSlide % staff.length]
 
 	return (
 		<>
 			<div ref={sliderRef} className='keen-slider'>
-				{staff.map((member, index) => (
-					<div
-						key={member.id}
-						className='keen-slider__slide w-[clamp(280px,24.5vw,470px)] min-w-[clamp(280px,24.5vw,470px)]'
-					>
-						<StaffCard member={member} isActive={currentSlide === index} />
-					</div>
-				))}
+				{sliderStaff.map((member, index) => {
+					const originalIndex = index % staff.length
+
+					return (
+						<div
+							key={`${member.id}-${index}`}
+							className='keen-slider__slide w-[clamp(280px,24.5vw,470px)] min-w-[clamp(280px,24.5vw,470px)]'
+						>
+							<StaffCard
+								member={member}
+								isActive={currentSlide % staff.length === originalIndex}
+							/>
+						</div>
+					)
+				})}
 			</div>
 			<div className='keep-slider-controls relative mt-10 flex items-center justify-center gap-16'>
 				<AppButton
