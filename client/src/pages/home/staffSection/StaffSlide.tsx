@@ -1,0 +1,65 @@
+import type { KeenSliderInstance } from 'keen-slider/react'
+import type { RefObject } from 'react'
+import { IoChevronBack } from 'react-icons/io5'
+
+import { AppButton } from '@/components/ui/AppButton'
+
+import { StaffCard } from './StaffCard'
+import type { Staff } from '@/data/staff'
+
+type StaffSlideProps = {
+	currentSlide: number
+	sliderRef: (node: HTMLDivElement | null) => void
+	instanceRef: RefObject<KeenSliderInstance | null>
+	staff: Staff[]
+}
+
+export const StaffSlide = ({
+	currentSlide,
+	sliderRef,
+	instanceRef,
+	staff
+}: StaffSlideProps) => {
+	const activePerson = staff[currentSlide % staff.length]
+
+	return (
+		<>
+			<div ref={sliderRef} className='keen-slider'>
+				{staff.map((member, index) => (
+					<div
+						key={member.id}
+						className='keen-slider__slide w-[clamp(280px,24.5vw,470px)] min-w-[clamp(280px,24.5vw,470px)]'
+					>
+						<StaffCard member={member} isActive={currentSlide === index} />
+					</div>
+				))}
+			</div>
+			<div className='keep-slider-controls relative mt-10 flex items-center justify-center gap-16'>
+				<AppButton
+					aria-label='Предыдущий мастер'
+					appVariant='icon'
+					className='group absolute bottom-1 left-1/8 h-10! w-10! min-w-10! rounded-none! p-0! lg:bottom-4 lg:left-2/7 2xl:left-3/8'
+					onClick={() => instanceRef.current?.prev()}
+				>
+					<IoChevronBack className='text-line text-xl transition-colors duration-200 ease group-hover:text-accent' />
+				</AppButton>
+				<div className='text-center'>
+					<div className='text-head text-[20px] lg:text-[32px]'>
+						{activePerson.name}
+					</div>
+					<div className='text-head text-[14px] lg:text-[20px]'>
+						{activePerson.position}
+					</div>
+				</div>
+				<AppButton
+					aria-label='Следующий мастер'
+					appVariant='icon'
+					className='group absolute right-1/8 bottom-1 h-10! w-10! min-w-10! rounded-none! p-0! lg:right-2/7 lg:bottom-4 2xl:right-3/8'
+					onClick={() => instanceRef.current?.next()}
+				>
+					<IoChevronBack className='text-line rotate-180 text-xl transition-colors duration-200 ease group-hover:text-accent' />
+				</AppButton>
+			</div>
+		</>
+	)
+}

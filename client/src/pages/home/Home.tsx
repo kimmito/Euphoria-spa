@@ -5,7 +5,7 @@ import { HeroSection } from './HeroSection'
 import PortfolioSection from './PortfolioSection'
 import ReportsSection from './reportsSection/ReportsSection'
 import { ServicesSection } from './ServicesSection'
-import StaffSection from './StaffSection'
+import StaffSection from './staffSection/StaffSection'
 import OffersSection from './offersSection/OffersSection'
 import MapSection from '@/pages/home/MapSection'
 

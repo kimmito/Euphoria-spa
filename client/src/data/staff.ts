@@ -1,4 +1,10 @@
-export const staff = [
+export type Staff = {
+	id: string
+	name: string
+	position: string
+	photo: string
+}
+export const staff: Staff[] = [
 	{
 		id: '1',
 		name: 'Анна Петрова',
