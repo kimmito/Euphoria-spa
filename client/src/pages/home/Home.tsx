@@ -2,11 +2,12 @@ import ScrollVelocity from '@/components/ui/ScrollVelocity'
 
 import AboutSection from './AboutSection'
 import { HeroSection } from './HeroSection'
-import OffersSection from './offersSection/OffersSection'
 import PortfolioSection from './PortfolioSection'
+import ReportsSection from './reportsSection/ReportsSection'
 import { ServicesSection } from './ServicesSection'
-import MapSection from '@/pages/home/MapSection'
 import StaffSection from './StaffSection'
+import OffersSection from './offersSection/OffersSection'
+import MapSection from '@/pages/home/MapSection'
 
 const Home = () => {
 	return (
@@ -14,14 +15,14 @@ const Home = () => {
 			<HeroSection />
 			<ScrollVelocity texts={['THRILL', 'THRILL', 'THRILL']} />
 			<AboutSection />
-
 			<ServicesSection />
 			<OffersSection />
 			<StaffSection />
 			<ScrollVelocity texts={['THRILL', 'THRILL', 'THRILL']} />
 			<PortfolioSection />
+			<ReportsSection />
 			<MapSection />
-			<ScrollVelocity texts={['THRILL', 'THRILL', 'THRILL']}/>
+			<ScrollVelocity texts={['THRILL', 'THRILL', 'THRILL']} />
 		</>
 	)
 }
