@@ -3,12 +3,14 @@ import type { Staff } from '@/data/staff'
 type StaffCardProps = {
 	member: Staff
 	isActive?: boolean
+	showCaption?: boolean
 	className?: string
 }
 
 export const StaffCard = ({
 	member,
 	isActive = true,
+	showCaption = true,
 	className = ''
 }: StaffCardProps) => {
 	return (
@@ -20,14 +22,16 @@ export const StaffCard = ({
 					isActive ? 'opacity-100' : 'opacity-50'
 				}`}
 			/>
-			<div className='mt-5'>
-				<h3 className='text-head text-[24px] leading-tight lg:text-[32px]'>
-					{member.name}
-				</h3>
-				<p className='text-copy mt-1 text-[16px] leading-tight lg:text-[20px]'>
-					{member.position}
-				</p>
-			</div>
+			{showCaption ? (
+				<div className='mt-5'>
+					<h3 className='text-head text-[24px] leading-tight lg:text-[32px]'>
+						{member.name}
+					</h3>
+					<p className='text-copy mt-1 text-[16px] leading-tight lg:text-[20px]'>
+						{member.position}
+					</p>
+				</div>
+			) : null}
 		</article>
 	)
 }

@@ -38,6 +38,7 @@ export const StaffSlide = ({
 							<StaffCard
 								member={member}
 								isActive={currentSlide % staff.length === originalIndex}
+								showCaption={false}
 							/>
 						</div>
 					)
