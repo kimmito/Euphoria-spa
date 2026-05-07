@@ -32,7 +32,7 @@ const GiftCertificateValueCard = ({ value }: GiftCertificateValueCardProps) => {
 
 	return (
 		<div
-			className='relative grid cursor-pointer place-items-center overflow-hidden rounded-[27px] bg-accent hover:bg-accent/90 hover:shadow-lg px-14 py-10 text-[64px] font-bold leading-none text-[#090808]'
+			className='relative grid cursor-pointer place-items-center overflow-hidden rounded-[27px] bg-[#090808] text-head hover:bg-accent/90 hover:text-[#090808] transition-color ease duration-500 hover:shadow-lg px-14 py-10 text-[64px] font-bold leading-none text-[#090808]'
 			onMouseEnter={animateIn}
 			onMouseLeave={animateOut}
 		>
