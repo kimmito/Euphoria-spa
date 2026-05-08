@@ -1,4 +1,5 @@
 import { AppButton } from '@/components/ui/AppButton'
+import ticketImage from '@/assets/images/ticket.png'
 
 import type { RepeatVisitOffer } from '@/data/offers'
 
@@ -20,7 +21,8 @@ const RepeatVisitDiscountSlide = ({ offer }: RepeatVisitDiscountSlideProps) => {
 								{item.title}
 							</p>
 							<div
-								className={`${item.value.length > 8 ? 'text-2xl pt-12' : item.value.length > 6 ? 'text-[30px] pt-14' : 'text-[34px]'} bg-[url(./src/assets/images/ticket.png)] bg-center bg-contain bg-no-repeat h-100 w-57.5 text-center font-bold pt-9`}
+								className={`${item.value.length > 8 ? 'text-2xl pt-12' : item.value.length > 6 ? 'text-[30px] pt-14' : 'text-[34px]'} bg-center bg-contain bg-no-repeat h-100 w-57.5 text-center font-bold pt-9`}
+								style={{ backgroundImage: `url(${ticketImage})` }}
 							>
 								{item.value}
 							</div>

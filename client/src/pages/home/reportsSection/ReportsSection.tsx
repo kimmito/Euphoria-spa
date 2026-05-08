@@ -1,6 +1,7 @@
 import { useKeenSlider } from 'keen-slider/react'
 import { FaChevronLeft, FaChevronRight} from "react-icons/fa";
 import { AppButton } from '@/components/ui/AppButton'
+import posingImage from '@/assets/images/posing.jpg'
 
 import { ReportCard } from './ReportCard'
 import { reports } from '@/data/reports'
@@ -22,7 +23,7 @@ const ReportsSection = () => {
 			</h2>
 			<div
 				ref={sliderRef}
-				className='keen-slider w-3/8 mr-0 bg-[#5F5F5F] h-[clamp(400px,60vh,700px)]! overflow-hidden relative'
+				className='keen-slider w-3/8 min-w-0 mr-0 bg-[#5F5F5F] h-[clamp(400px,60vh,700px)]! overflow-hidden relative'
 			>
 				{reports.map(report => (
 					<ReportCard key={report.id} report={report} />
@@ -47,8 +48,8 @@ const ReportsSection = () => {
 				</div>
 			</div>
 			<img
-				src='./src/assets/images/posing.jpg'
-				className='w-3/8 object-contain'
+				src={posingImage}
+				className='w-3/8 shrink-0 object-contain'
 				alt=''
 			/>
 		</section>

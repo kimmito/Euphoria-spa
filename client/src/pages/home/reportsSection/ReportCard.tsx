@@ -8,24 +8,26 @@ type ReportCardProps = {
 
 export const ReportCard = ({ report }: ReportCardProps) => {
 	return (
-		<div className='keen-slider__slide'>
-			<div className='container m-15 pr-25'>
-				<div className='flex flex-row items-center gap-5'>
-					<div className='mt-3'>
+		<div className='keen-slider__slide min-w-0'>
+			<div className='box-border h-full w-full max-w-full px-15 py-15 pr-25'>
+				<div className='flex min-w-0 flex-row items-center gap-5'>
+					<div className='mt-3 shrink-0'>
 						{report.image ? (
 							<img
 								src={report.image}
 								alt={report.author}
-								className='w-16 h-16 rounded-full'
+								className='h-16 w-16 rounded-full'
 							/>
 						) : (
-							<RxAvatar className='w-16 h-16' />
+							<RxAvatar className='h-16 w-16' />
 						)}
 					</div>
 
-					<div>
-						<p className='font-bold text-[32px] text-head '>{report.author}</p>
-						<p className='text-[24px] text-head leading-none'>{report.date}</p>
+					<div className='min-w-0'>
+						<p className='text-head truncate text-[32px] font-bold'>
+							{report.author}
+						</p>
+						<p className='text-head text-[24px] leading-none'>{report.date}</p>
 					</div>
 				</div>
 				<div className='mb-5'>
@@ -40,7 +42,9 @@ export const ReportCard = ({ report }: ReportCardProps) => {
 						</span>
 					))}
 				</div>
-				<p className='font-bold text-2xl text-head'>{report.text}</p>
+				<p className='text-head max-w-full overflow-hidden break-words text-2xl font-bold leading-snug'>
+					{report.text}
+				</p>
 			</div>
 		</div>
 	)
