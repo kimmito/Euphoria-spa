@@ -1,9 +1,11 @@
 import { useEffect, useMemo, useState } from 'react'
 
-import { AppButton } from '@/components/ui/AppButton'
 
 import { categories } from '@/data/categories'
 import { useServiceConnectorLine } from '@/pages/home/servicesSection/useServiceConnectorLine'
+import { ServicesTabs } from './ServicesTabs'
+import { ServicesPriceTable } from './ServicesPriceTable'
+import { ServicesConnectorLine } from './ServicesConnectorLine'
 
 const PRICE_HASH_PREFIX = 'services-price-'
 
@@ -11,7 +13,7 @@ export const ServicesSection = () => {
 	const [selectedCategory, setSelectedCategory] = useState<string | null>(
 		categories.length > 0 ? categories[0].id : null
 	)
-	const categoryIds = useMemo(() => categories.map(category => category.id), [])
+	const categoryIds = useMemo(() => categories.map(category => category.id), [categories])
 	const { sectionRef, tabsRef, priceRef, buttonRefs, line } =
 		useServiceConnectorLine({ selectedCategory, categoryIds })
 
@@ -43,7 +45,7 @@ export const ServicesSection = () => {
 		return () => {
 			window.removeEventListener('hashchange', applyPriceHash)
 		}
-	}, [priceRef, sectionRef])
+	}, [sectionRef])
 
 	return (
 		<section
@@ -54,106 +56,11 @@ export const ServicesSection = () => {
 				<h2 className='text-head uppercase font-bold text-8xl text-end mb-26'>
 					Услуги
 				</h2>
-				<div
-					ref={tabsRef}
-					role='tablist'
-					aria-label='Выбор услуги'
-					className='w-full mx-auto flex justify-between mb-10 gap-4'
-				>
-					{categories.map(category => (
-						<div
-							key={category.id}
-							ref={node => {
-								buttonRefs.current[category.id] = node
-							}}
-						>
-							<AppButton
-								role='tab'
-								aria-selected={selectedCategory === category.id}
-								onClick={() => setSelectedCategory(category.id)}
-								appVariant={
-									selectedCategory === category.id ? 'active' : 'primary'
-								}
-								className='px-20 text-head py-6 text-2xl! hover:bg-transparent hover:text-accent! hover:border-accent hover:opacity-75'
-							>
-								{category.name}
-							</AppButton>
-						</div>
-					))}
-				</div>
-				<div id='services-price' ref={priceRef} className='mt-30'>
-					<table className='w-1/2 mb-18 ml-10 border-collapse [&_td]:border-b [&_td]:border-line/35 [&_td]:py-5 [&_td:last-child]:pl-8 [&_td:last-child]:text-right [&_tr:last-child_td]:border-b-0'>
-						<tbody>
-							<tr>
-								<td className='text-2xl max-w-100'>Маникюр</td>
-								<td className='text-[32px] font-bold text-center'>1500 ₽</td>
-							</tr>
-							<tr>
-								<td className='text-2xl max-w-100'>Маникюр</td>
-								<td className='text-[32px] font-bold text-center'>2000 ₽</td>
-							</tr>
-							<tr>
-								<td className='text-2xl max-w-100'>Маникюр</td>
-								<td className='text-[32px] font-bold text-center'>2000 ₽</td>
-							</tr>
-							<tr>
-								<td className='text-2xl max-w-100'>Маникюр</td>
-								<td className='text-[32px] font-bold text-center'>2000 ₽</td>
-							</tr>
-							<tr>
-								<td className='text-2xl max-w-100'>Маникюр</td>
-								<td className='text-[32px] font-bold text-center'>2000 ₽</td>
-							</tr>
-						</tbody>
-					</table>
-					<div className='flex flex-row gap-3 ml-10 w-1/2 *:flex *:px-20 *:py-6 *:text-2xl'>
-						<AppButton
-							className='flex-2 hover:bg-transparent hover:text-accent! hover:border-accent'
-							appVariant='primary'
-						>
-							Онлайн-запись
-						</AppButton>
-						<AppButton className='flex-1' appVariant='outline'>
-							Портфолио
-						</AppButton>
-					</div>
-				</div>
+				<ServicesTabs ref={tabsRef} categories={categories} buttonRefs={buttonRefs} selectedCategory={selectedCategory} onSelectCategory={setSelectedCategory} />
+				<ServicesPriceTable ref={priceRef} />
+				<ServicesConnectorLine line={line} />
 
-				{line ? (
-					<div className='pointer-events-none absolute inset-0'>
-						<div
-							className='absolute bg-accent'
-							style={{
-								left: `${line.railX}px`,
-								top: `${line.railTop}px`,
-								width: '1px',
-								height: `${line.railHeight}px`
-							}}
-						/>
-						{line.hasConnector ? (
-							<>
-								<div
-									className='absolute bg-accent'
-									style={{
-										left: `${line.branchLeft}px`,
-										top: `${line.branchY}px`,
-										width: `${line.branchWidth}px`,
-										height: '1px'
-									}}
-								/>
-								<div
-									className='absolute bg-accent'
-									style={{
-										left: `${line.linkX}px`,
-										top: `${line.linkTop}px`,
-										width: '1px',
-										height: `${line.linkHeight}px`
-									}}
-								/>
-							</>
-						) : null}
-					</div>
-				) : null}
+
 			</div>
 		</section>
 	)
