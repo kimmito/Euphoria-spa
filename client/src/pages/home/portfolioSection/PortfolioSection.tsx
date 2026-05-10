@@ -36,7 +36,7 @@ const PortfolioSection = () => {
 	]
 	return (
 		<section id='portfolio'>
-			<h2 className='text-8xl font-bold text-left my-16 ml-50 uppercase'>
+			<h2 className='text-8xl font-bold text-left pt-16 ml-50 uppercase'>
 				Портфолио
 			</h2>
 			<div id='gallery' className='relative'>

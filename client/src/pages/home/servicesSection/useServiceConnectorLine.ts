@@ -74,7 +74,7 @@ export function useServiceConnectorLine({
 					})()
 				: defaultLinkX
 			const railTop = isFirstCategory
-				? Math.min(buttonMiddleY, tabsRect.top - sectionRect.top - 10)
+				? Math.min(buttonMiddleY, tabsRect.top - sectionRect.top / 2)
 				: branchY
 			const railBottom = priceRect.bottom - sectionRect.top
 

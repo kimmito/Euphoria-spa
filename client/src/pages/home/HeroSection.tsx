@@ -20,50 +20,62 @@ export const HeroSection = () => {
 	]
 	const navigate = useNavigate()
 	return (
-		<section className='flex h-[92vh] max-w-375 mx-auto px-4 mt-10 items-center justify-between gap-20' id='home'>
-			<div className='flex w-1/3 mx-20 text-center items-center justify-center flex-col '>
+		<section
+			className='relative flex h-[92vh] max-w-375 mx-auto px-4 mt-10 items-center justify-between gap-20'
+			id='home'
+		>
+			<div className='flex w-1/2 mx-20 text-center items-center justify-center flex-col '>
 				<nav className='w-full mb-8'>
-					<ul className='flex justify-center gap-10 mb-10 w-full'>
+					<ul className='flex justify-between mb-10 w-full'>
 						{links.map(link => (
 							<li key={link.label}>
-								<AppButton appVariant='outline' className='text-[16px]! p-5!' href={link.href}>
+								<AppButton
+									appVariant='outline'
+									className='text-[16px]! py-5! px-7!'
+									href={link.href}
+								>
 									{link.label}
 								</AppButton>
 							</li>
 						))}
 					</ul>
 				</nav>
-				<h2 className='text-3xl uppercase'>Салон красоты в Краснодаре</h2>
-				<h1 className='text-8xl font-title font-semibold uppercase tracking-widest'>
-					Thrill
-				</h1>
-				<ul className='flex mt-6 justify-center text-2xl [&>li]:after:content-["|"] [&>li]:after:mx-4 [&>li]:last:after:content-[""]'>
-					{categories.map(category => (
-						<li key={category.name}>
-							<span className='lowercase'>{category.name}</span>
-						</li>
-					))}
-				</ul>
-				<div className='mt-12 mb-18 flex gap-10 justify-center'>
+				<div className='flex flex-col items-center justify-center'>
+					<h2 className='block text-3xl uppercase'>
+						Салон красоты в Краснодаре
+					</h2>
+					<h1 className='block text-8xl font-title font-semibold uppercase tracking-widest'>
+						Thrill
+					</h1>
+					<ul className='flex -mt-1 justify-center text-[23px] [&>li]:after:content-["|"] [&>li]:after:mx-4 [&>li]:last:after:content-[""] [&>li]:last:after:mx-0'>
+						{categories.map(category => (
+							<li key={category.name}>
+								<span className='lowercase'>{category.name}</span>
+							</li>
+						))}
+					</ul>
+				</div>
+
+				<div className='mt-12 mb-18 flex w-full justify-between'>
 					<AppButton
 						appVariant='primary'
-						className='w-75 py-6 text-2xl! hover:text-accent! hover:border-accent hover:bg-transparent'
+						className='w-75 py-6 text-2xl!'
 					>
 						Онлайн-запись
 					</AppButton>
 					<AppButton
 						appVariant='primary'
-						className='w-75 py-6 text-2xl! hover:text-accent! hover:border-accent hover:bg-transparent'
+						className='w-75 py-6 text-2xl!'
 						onClick={() => navigate('/shop')}
 					>
 						Магазин
 					</AppButton>
 				</div>
 				<div className='flex flex-col gap-2'>
-					<AppButton appVariant='link' className='text-xl'>
-						Войти в аккаунт
+					<AppButton appVariant='link' className='px-2'>
+						<span>Войти в аккаунт</span>
 					</AppButton>
-					<AppButton appVariant='link' className='text-xl'>
+					<AppButton appVariant='link' className='px-2'>
 						Зарегистрироваться
 					</AppButton>
 				</div>

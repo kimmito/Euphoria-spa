@@ -12,9 +12,9 @@ export const Layout = () => {
 				<main className='w-full mx-auto pb-10 relative'>
 					<div className='absolute top-0 left-0 w-full h-full -z-100000'>
 						<Grainient
-							color1='#201232'
+							color1='#1c162e'
 							color2='#191526'
-							color3='#291737'
+							color3='#100d1a'
 							timeSpeed={2}
 							colorBalance={0.26}
 							warpStrength={1.05}
