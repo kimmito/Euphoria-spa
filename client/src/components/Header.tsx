@@ -7,17 +7,17 @@ import { AppButton } from './ui/AppButton'
 const socialLinks = [
 	{
 		href: 'https://instagram.com',
-		icon: <AiFillInstagram size={20} className='relative top-0.5' />,
+		icon: <AiFillInstagram size={20} />,
 		label: 'Instagram'
 	},
 	{
 		href: 'https://vk.com',
-		icon: <FaVk size={20} className='relative top-0.5' />,
+		icon: <FaVk size={20} />,
 		label: 'VK'
 	},
 	{
 		href: 'https://telegram.com',
-		icon: <FaTelegramPlane size={20} className='relative top-0.5' />,
+		icon: <FaTelegramPlane size={20} />,
 		label: 'Telegram'
 	}
 ]
@@ -48,7 +48,7 @@ const Header = () => {
 	]
 	return (
 		<header
-			className={`w-full h-18 fixed top-0 left-0 z-1000 transition-color duration-200 ${!isHeroVisible ? 'bg-base/70' : 'bg-transparent'}`}
+			className={`w-full h-18 fixed top-0 left-0 z-1000 transition-color duration-200 ${!isHeroVisible ? 'bg-base/90' : 'bg-transparent'}`}
 		>
 			<div className='container mx-auto h-full flex items-center justify-between px-4'>
 				<div
@@ -56,18 +56,18 @@ const Header = () => {
 				>
 					<AppButton
 						appVariant='link'
-						className='flex flex-col items-center mb-3 group/logo'
+						className='flex flex-col items-center mb-3 group/logo no-underline!'
 					>
-						<p className='group-hover/logo:text-copy/70 transition-colors duration-300 font-title text-[42px] uppercase text-copy'>
+						<p className='group-hover/logo:text-copy/70 transition-colors duration-300 font-title text-[36px] uppercase text-copy'>
 							Thrill
 						</p>
-						<p className='group-hover/logo:text-copy/80 transition-colors duration-300 text-[17px]  leading-0 text-head'>
+						<p className='group-hover/logo:text-copy/80 transition-colors duration-300 text-[13px] tracking-wider leading-0 text-head'>
 							Салон красоты в Краснодаре
 						</p>
 					</AppButton>
 					<AppButton
 						appVariant='primary'
-						className='text-xl! hover:text-accent! mx-7 px-8 py-5 hover:bg-transparent! shadow-lg '
+						className='text-lg! hover:text-accent! mx-7 px-7 py-4.5 hover:bg-transparent! shadow-lg '
 					>
 						Онлайн-запись
 					</AppButton>
@@ -77,7 +77,7 @@ const Header = () => {
 								<li key={link.label}>
 									<AppButton
 										appVariant='outline'
-										className='text-[16px]! p-5!'
+										className='text-[14px]! p-4!'
 										href={link.href}
 									>
 										{link.label}
@@ -87,7 +87,7 @@ const Header = () => {
 						</ul>
 					</nav>
 				</div>
-				<div className='flex space-x-2'>
+				<div className='flex space-x-2 items-center'>
 					{socialLinks.map(link => (
 						<AppButton
 							key={link.href}
@@ -97,14 +97,14 @@ const Header = () => {
 							aria-label={link.label}
 							icon={link.icon}
 							appVariant='icon'
-							className='w-19'
+							className='size-10! min-w-10! [&_.ant-btn-icon]:flex [&_.ant-btn-icon]:items-center [&_.ant-btn-icon]:justify-center'
 						/>
 					))}
 					<AppButton
 						href='tel:+79615177332'
 						icon={<FaPhoneAlt size={18} />}
 						appVariant='icon'
-						className='w-full bg-button! text-xl hover:bg-transparent!'
+						className='w-full h-10! px-8 bg-button! text-[22px] hover:bg-transparent! hover:text-accent! hover:border-accent!'
 					>
 						+7 (961) 517-73-32
 					</AppButton>
