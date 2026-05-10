@@ -69,19 +69,19 @@ const OffersCarousel = ({
 			<AppButton
 				aria-label='Предыдущее предложение'
 				appVariant='icon'
-				className='group h-10! w-10! min-w-10! rounded-none! p-0! absolute bottom-17 left-17'
+				className='h-10! w-10! min-w-10! rounded-none! p-0! absolute bottom-17 left-17'
 				onClick={() => carouselRef.current?.prev()}
 			>
-				<IoChevronBack className='text-xl text-line transition-colors duration-200 ease group-hover:text-accent' />
+				<IoChevronBack className='text-xl text-line' />
 			</AppButton>
 
 			<AppButton
 				aria-label='Следующее предложение'
 				appVariant='icon'
-				className='group h-10! w-10! min-w-10! rounded-none! p-0! absolute bottom-17 right-17'
+				className='h-10! w-10! min-w-10! rounded-none! p-0! absolute bottom-17 right-17 hover:bg-accent'
 				onClick={() => carouselRef.current?.next()}
 			>
-				<IoChevronBack className='rotate-180 text-xl text-line transition-colors duration-200 ease group-hover:text-accent' />
+				<IoChevronBack className='rotate-180 text-xl text-line' />
 			</AppButton>
 		</div>
 	)

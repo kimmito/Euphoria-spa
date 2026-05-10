@@ -48,10 +48,10 @@ export const StaffSlide = ({
 				<AppButton
 					aria-label='Предыдущий мастер'
 					appVariant='icon'
-					className='group absolute bottom-1 left-1/8 h-10! w-10! min-w-10! rounded-none! p-0! lg:bottom-4 lg:left-2/7 2xl:left-3/8'
+					className='absolute bottom-1 left-1/8 h-10! w-10! min-w-10! rounded-none! p-0! lg:bottom-4 lg:left-2/7 2xl:left-3/8'
 					onClick={() => instanceRef.current?.prev()}
 				>
-					<IoChevronBack className='text-line text-xl transition-colors duration-200 ease group-hover:text-accent' />
+					<IoChevronBack className='text-line text-xl transition-colors' />
 				</AppButton>
 				<div className='text-center'>
 					<div className='text-head text-[20px] lg:text-[32px]'>
@@ -67,7 +67,7 @@ export const StaffSlide = ({
 					className='group absolute right-1/8 bottom-1 h-10! w-10! min-w-10! rounded-none! p-0! lg:right-2/7 lg:bottom-4 2xl:right-3/8'
 					onClick={() => instanceRef.current?.next()}
 				>
-					<IoChevronBack className='text-line rotate-180 text-xl transition-colors duration-200 ease group-hover:text-accent' />
+					<IoChevronBack className='text-line rotate-180 text-xl ' />
 				</AppButton>
 			</div>
 		</>

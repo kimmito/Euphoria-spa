@@ -1,10 +1,10 @@
 import { useKeenSlider } from 'keen-slider/react'
-import { FaChevronLeft, FaChevronRight} from "react-icons/fa";
 import { AppButton } from '@/components/ui/AppButton'
 import posingImage from '@/assets/images/posing.jpg'
 
 import { ReportCard } from './ReportCard'
 import { reports } from '@/data/reports'
+import { IoChevronBack } from 'react-icons/io5';
 
 const ReportsSection = () => {
 	const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
@@ -32,18 +32,18 @@ const ReportsSection = () => {
 					<AppButton
 						aria-label='Предыдущий отзыв'
 						appVariant='icon'
-						className='group h-12! w-12! min-w-12! rounded-none! border-line/55! bg-base/70! p-0! text-line! hover:border-accent! hover:bg-base/90! hover:text-accent!'
+						className='group h-12! w-12! min-w-12! rounded-none! text-button! border-button!'
 						onClick={() => instanceRef.current?.prev()}
 					>
-						<FaChevronLeft className='text-[28px] transition-colors duration-200 ease' />
+						<IoChevronBack className='text-[28px] transition-colors duration-200 ease' />
 					</AppButton>
 					<AppButton
 						aria-label='Следующий отзыв'
 						appVariant='icon'
-						className='group h-12! w-12! min-w-12! rounded-none! border-line/55! bg-base/70! p-0! text-line! hover:border-accent! hover:bg-base! hover:text-accent!'
+						className='group h-12! w-12! min-w-12! rounded-none!  text-button! border-button!'
 						onClick={() => instanceRef.current?.next()}
 					>
-						<FaChevronRight className='text-[28px] transition-colors duration-200 ease' />
+						<IoChevronBack className='rotate-180 text-[28px] transition-colors duration-200 ease' />
 					</AppButton>
 				</div>
 			</div>
