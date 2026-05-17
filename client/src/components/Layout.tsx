@@ -3,6 +3,7 @@ import { Outlet } from 'react-router'
 import Footer from './Footer'
 import Header from './Header'
 import Grainient from './ui/Gradient'
+import { FeedbackWidget } from '@/features/feedback/FeedbackWidget'
 
 export const Layout = () => {
 	return (
@@ -39,6 +40,7 @@ export const Layout = () => {
 					<Outlet />
 				</main>
 				<Footer />
+				<FeedbackWidget />
 			</div>
 		</div>
 	)

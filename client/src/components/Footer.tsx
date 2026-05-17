@@ -4,7 +4,7 @@ import { FaTelegramPlane, FaVk } from 'react-icons/fa'
 import { IoIosMail } from 'react-icons/io'
 import { useLocation, useNavigate } from 'react-router'
 
-import { AppButton } from '@/components/ui/AppButton'
+import { AppButton } from '@/components/ui/appButton/AppButton'
 
 import { categories } from '@/data/categories'
 
@@ -15,9 +15,9 @@ const staticFooterItems = [
 		categoryId: categories[0].id,
 		span: 6
 	},
-	{ key: 'works', label: 'Наши работы', span: 6, href: '#portfolio' },
-	{ key: 'price', label: 'Прайс', hash: 'services-price', span: 6 },
-	{ key: 'contacts', label: 'Контакты', span: 6, href: '#map' },
+	{ key: 'about', label: 'О нас', span: 6, href: '#about' },
+	{ key: 'services', label: 'Услуги', hash: 'services', span: 6 },
+	{ key: 'portfolio', label: 'Портфолио', span: 6, href: '#portfolio' },
 
 	{
 		key: 's1',
@@ -75,67 +75,68 @@ const Footer = () => {
 		}
 	]
 	return (
-		<footer className='site-footer flex w-full justify-center gap-20 bg-base px-4 py-10 text-copy'>
-			<div className='w-1/5 flex items-center'>
-				<p className='text-[14px] tracking-wide text-copy/60 '>
-					&copy; 2026 THRILL. Все права защищены. <br />
-					Цены на нашем сайте не являются публичной офертой, актуальные цены
-					можно узнать при записи.
-				</p>
-			</div>
+		<footer className='site-footer w-full  gap-20 bg-dark px-4 py-10 text-copy'>
+			<div className='max-w-380 mx-auto justify-between flex'>
+				<div className='flex items-center max-w-2/7'>
+					<p className='text-[14px] tracking-wide text-copy/60 '>
+						&copy; 2026 THRILL. Все права защищены. <br />
+						Цены на нашем сайте не являются публичной офертой, актуальные цены
+						можно узнать при записи.
+					</p>
+				</div>
 
-			<div>
-				<Row gutter={[16, 16]} className='font-semibold'>
-					{footerItems.map(item => (
-						<Col key={item.key} span={item.span}>
-							{item.label ? (
-								<AppButton
-									appVariant='link'
-									className='inline-block text-[16px]'
-									href={item.href ? item.href : undefined}
-									onClick={
-										item.categoryId
-											? () =>
-													scrollToServices(`services-price-${item.categoryId}`)
-											: item.hash
-												? () => scrollToServices(item.hash)
-												: undefined
-									}
-								>
-									{item.label}
-								</AppButton>
-							) : null}
-						</Col>
-					))}
-				</Row>
-			</div>
-			<div>
-				<div className='flex gap-3 bottom-1 mb-2 relative'>
-					{social.map(s => (
-						<AppButton
-							key={s.key}
-							href={s.href}
-							target='_blank'
-							rel='noopener noreferrer'
-							icon={s.icon}
-							appVariant='icon'
-							className='rounded-full'
-						/>
-					))}
+				<div>
+					<Row gutter={[10, 10]} className='font-semibold'>
+						{footerItems.map(item => (
+							<Col key={item.key} span={item.span}>
+								{item.label ? (
+									<AppButton
+										appVariant='link'
+										className='inline-block text-[16px]'
+										href={item.href ? item.href : undefined}
+										onClick={
+											item.categoryId
+												? () =>
+														scrollToServices(
+															`services-price-${item.categoryId}`
+														)
+												: item.hash
+													? () => scrollToServices(item.hash)
+													: undefined
+										}
+									>
+										{item.label}
+									</AppButton>
+								) : null}
+							</Col>
+						))}
+					</Row>
 				</div>
 				<div>
-					<AppButton
-						href='https://telegram.com'
-						target='_blank'
-						rel='noopener noreferrer'
-						icon={<IoIosMail size={20} className='relative top-0.5' />}
-						appVariant='icon'
-						className='rounded-full'
-					/>
+					<div className='flex gap-3 bottom-1 mb-2 relative'>
+						{social.map(s => (
+							<AppButton
+								key={s.key}
+								href={s.href}
+								target='_blank'
+								rel='noopener noreferrer'
+								icon={s.icon}
+								appVariant='icon'
+							/>
+						))}
+					</div>
+					<div>
+						<AppButton
+							href='https://telegram.com'
+							target='_blank'
+							rel='noopener noreferrer'
+							icon={<IoIosMail size={20} className='relative top-0.5' />}
+							appVariant='icon'
+						/>
+					</div>
 				</div>
 			</div>
 		</footer>
 	)
 }
 export default Footer
-
