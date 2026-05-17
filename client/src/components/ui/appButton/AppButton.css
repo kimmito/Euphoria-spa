@@ -1,0 +1,29 @@
+@reference '@/global.css';
+@layer components {
+	.ant-btn {
+		border-radius: 0;
+		color: var(--color-head);
+		border-color: var(--color-line);
+		font-family: var(--font-body);
+		font-weight: 400;
+	}
+
+	.feedback-pulse {
+		animation: feedback-pulse 1.8s ease-in-out infinite;
+	}
+
+	@keyframes feedback-pulse {
+		0% {
+			transform: scale(1);
+			box-shadow: 0 0 0 0 rgba(255, 228, 118, 0.5);
+		}
+		50% {
+			transform: scale(1.04);
+			box-shadow: 0 0 0 12px rgba(255, 228, 118, 0);
+		}
+		100% {
+			transform: scale(1);
+			box-shadow: 0 0 0 0 rgba(255, 228, 118, 0);
+		}
+	}
+}

@@ -1,0 +1,58 @@
+@reference '@/global.css';
+@layer antd {
+	.app-modal__wrapper {
+		display: flex;
+		justify-content: flex-end;
+		align-items: stretch;
+	}
+
+	.app-modal {
+		margin: 0;
+		right: 0;
+		padding-bottom: 0;
+	}
+
+	.app-modal.ant-modal {
+		top: 0;
+		height: 100vh;
+		max-height: 100vh;
+		padding: 0;
+		margin: 0;
+		right: 0;
+		left: auto;
+		box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
+	}
+
+	.app-modal.ant-modal .ant-modal-container {
+		height: 100vh;
+		max-height: 100vh;
+		border-radius: 0;
+		padding: 0;
+		background-color: var(--color-dark);
+		color: var(--color-copy);
+	}
+
+	.app-modal.ant-modal .ant-modal-content {
+		height: 100%;
+		border-radius: 0;
+	}
+	.app-modal.ant-modal .ant-modal-close {
+		margin: 20px;
+	}
+	.app-modal.ant-modal .ant-modal-close-x {
+		font-size: 34px;
+	}
+
+	.app-modal__container {
+		height: 100%;
+		border-radius: 0;
+	}
+
+	.app-modal__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+}

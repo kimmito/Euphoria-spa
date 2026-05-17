@@ -2,6 +2,8 @@ import { Button } from 'antd'
 import type { ButtonProps } from 'antd'
 import clsx from 'clsx'
 
+import './AppButton.css'
+
 export type AppButtonVariant =
 	| 'primary'
 	| 'outline'
