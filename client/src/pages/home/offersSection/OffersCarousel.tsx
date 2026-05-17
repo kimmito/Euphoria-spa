@@ -3,7 +3,7 @@ import type { CarouselRef } from 'antd/es/carousel'
 import { useCallback, useRef } from 'react'
 import { IoChevronBack } from 'react-icons/io5'
 
-import { AppButton } from '@/components/ui/AppButton'
+import { AppButton } from '@/components/ui/appButton/AppButton'
 
 import GiftCertificateSlide from './GiftCertificateSlide'
 import RepeatVisitDiscountSlide from './RepeatVisitDiscountSlide'
@@ -45,7 +45,7 @@ const OffersCarousel = ({
 	}
 
 	return (
-		<div className='relative -mb-20'>
+		<div className='offers-carousel relative h-full w-full'>
 			<Carousel
 				autoplay
 				ref={carouselRef}

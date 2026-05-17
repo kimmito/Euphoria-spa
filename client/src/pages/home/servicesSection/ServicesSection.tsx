@@ -53,7 +53,7 @@ export const ServicesSection = () => {
 			className='relative pt-27 before:absolute before:inset-0 before:bg-[url("/src/assets/images/group1.png")] before:overflow-visible before:pb-120 before:-mb-120 before:bg-position-[right_top_3rem] before:bg-no-repeat before:content-[""] before:opacity-80 before:mix-blend-overlay'
 		>
 			<div ref={sectionRef} className='relative max-w-400 mx-auto px-4'>
-				<h2 className='text-head uppercase font-bold text-8xl text-end mb-14'>
+				<h2 className='text-head uppercase font-bold text-8xl text-end mb-14 mr-9'>
 					Услуги
 				</h2>
 				<ServicesTabs ref={tabsRef} categories={categories} buttonRefs={buttonRefs} selectedCategory={selectedCategory} onSelectCategory={setSelectedCategory} />

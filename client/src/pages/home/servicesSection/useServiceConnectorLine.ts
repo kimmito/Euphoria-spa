@@ -60,10 +60,10 @@ export function useServiceConnectorLine({
 			const previousButtonNode =
 				selectedIndex > 0 ? buttonRefs.current[categoryIds[selectedIndex - 1]] : null
 
-			const railX = priceRect.left - sectionRect.left - 22
+			const railX = priceRect.left - sectionRect.left - 40
 			const buttonMiddleY =
 				activeRect.top - sectionRect.top + activeRect.height / 2
-			const buttonBottomY = activeRect.bottom - sectionRect.top
+			const buttonBottomY = activeRect.bottom - sectionRect.top - 5
 			const branchY = buttonBottomY + 60
 			const defaultLinkX = activeRect.left - sectionRect.left - 10
 			const linkX = previousButtonNode

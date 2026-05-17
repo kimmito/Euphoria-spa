@@ -1,12 +1,12 @@
-import { AppButton } from '@/components/ui/AppButton'
+import { AppButton } from '@/components/ui/appButton/AppButton'
 
 type ServicesPriceTableProps = {
 	ref: React.RefObject<HTMLDivElement | null>
 }
 export const ServicesPriceTable = ({ ref }: ServicesPriceTableProps) => {
 	return (
-		<div id='services-price' ref={ref} className='mt-18'>
-			<table className='w-1/2 mb-10 ml-10 border-collapse [&_td]:border-b [&_td]:border-line/35 [&_td]:py-5 [&_td:last-child]:pl-8 [&_td:last-child]:text-right [&_tr:last-child_td]:border-b-0'>
+		<div id='services-price' ref={ref} className='mt-20'>
+			<table className='w-1/2 mb-10 ml-10 border-collapse [&_td]:border-b [&_td]:border-line/35 [&_td]:py-4 [&_td:last-child]:pl-8 [&_td:last-child]:text-right [&_tr:last-child_td]:border-b-0'>
 				<tbody>
 					<tr>
 						<td className='text-2xl max-w-100'>Маникюр</td>

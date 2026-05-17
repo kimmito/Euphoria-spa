@@ -1,4 +1,4 @@
-export type Report = {
+export type Review = {
 	id: string
 	image?: string
 	date: string
@@ -7,7 +7,7 @@ export type Report = {
 	text: string
 }
 
-export const reports: Report[] = [
+export const reviews: Review[] = [
 	{
 		id: '1',
 		stars: 5,

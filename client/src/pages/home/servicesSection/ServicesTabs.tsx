@@ -1,4 +1,4 @@
-import { AppButton } from '@/components/ui/AppButton'
+import { AppButton } from '@/components/ui/appButton/AppButton'
 
 import type { Category } from '@/types/category.type'
 
@@ -22,7 +22,7 @@ export const ServicesTabs = ({
 			ref={ref}
 			role='tablist'
 			aria-label='Выбор услуги'
-			className='w-full mx-auto flex justify-between mb-10 gap-4'
+			className='w-371 mx-auto flex justify-between mb-10'
 		>
 			{categories.map(category => (
 				<div

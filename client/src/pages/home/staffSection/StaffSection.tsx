@@ -26,7 +26,7 @@ const StaffSection = () => {
 
 	return (
 		<section id='staff' className='mb-10'>
-			<h2 className='text-head mb-10 max-w-435 text-right text-[96px] font-bold uppercase'>
+			<h2 className='block text-head mb-10 max-w-370 mx-auto text-right text-[96px] font-bold uppercase'>
 				Наши мастера
 			</h2>
 			{isSliderEnabled ? (

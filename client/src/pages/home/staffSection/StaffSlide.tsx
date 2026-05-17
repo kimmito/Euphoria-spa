@@ -2,7 +2,7 @@ import type { KeenSliderInstance } from 'keen-slider/react'
 import type { RefObject } from 'react'
 import { IoChevronBack } from 'react-icons/io5'
 
-import { AppButton } from '@/components/ui/AppButton'
+import { AppButton } from '@/components/ui/appButton/AppButton'
 
 import { StaffCard } from './StaffCard'
 import type { Staff } from '@/data/staff'

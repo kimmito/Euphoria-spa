@@ -1,7 +1,7 @@
 import type { RefObject } from 'react'
 import { useNavigate } from 'react-router'
 
-import { AppButton } from '@/components/ui/AppButton'
+import { AppButton } from '@/components/ui/appButton/AppButton'
 
 import heroImage from '@/assets/images/hero.jpg'
 
@@ -57,10 +57,7 @@ export const HeroSection = () => {
 				</div>
 
 				<div className='mt-12 mb-18 flex w-full justify-between'>
-					<AppButton
-						appVariant='primary'
-						className='w-75 py-6 text-2xl!'
-					>
+					<AppButton appVariant='primary' className='w-75 py-6 text-2xl!'>
 						Онлайн-запись
 					</AppButton>
 					<AppButton

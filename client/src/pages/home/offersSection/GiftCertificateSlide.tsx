@@ -1,8 +1,9 @@
-import { AppButton } from '@/components/ui/AppButton'
+import { useState } from 'react'
+
+import { AppButton } from '@/components/ui/appButton/AppButton'
 
 import GiftCertificateValueCard from './GiftCertificateValueCard'
 import type { GiftCertificateOffer } from '@/data/offers'
-import { useState } from 'react'
 
 type GiftCertificateSlideProps = {
 	offer: GiftCertificateOffer
@@ -13,10 +14,15 @@ const GiftCertificateSlide = ({ offer }: GiftCertificateSlideProps) => {
 		null
 	)
 	return (
-		<div className='my-10'>
+		<div className='mt-17'>
 			<div className='flex justify-center gap-20'>
 				{offer.items.map(item => (
-					<GiftCertificateValueCard key={item.id} value={item.value} onSelect={setSelectedCertificate} selected={selectedCertificate === item.value} />
+					<GiftCertificateValueCard
+						key={item.id}
+						value={item.value}
+						onSelect={setSelectedCertificate}
+						selected={selectedCertificate === item.value}
+					/>
 				))}
 			</div>
 			<div className='relative -top-3'>

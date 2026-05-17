@@ -1,7 +1,9 @@
 import { useState } from 'react'
 
 import thrillFrame from '@/assets/svg/thrill.svg'
+
 import OffersCarousel from './OffersCarousel'
+import './OffersSection.css'
 import { tempOffers as offers } from '@/data/offers'
 
 const OffersSection = () => {
@@ -9,12 +11,15 @@ const OffersSection = () => {
 	const activeOffer = offers[activeIndex] ?? offers[0]
 
 	return (
-		<section className='relative mt-32 mb-22 px-4 overflow-visible' id='offers'>
-			<div className='relative mx-auto min-h-180 max-w-420 p-[12%] lg:min-h-230'>
-				<h2 className='inline-block text-head text-8xl font-bold relative -mt-120 max-w-140 z-1'>
-					<span key={activeOffer?.id} className='offers-title-animated inline-block'>
+		<section className='relative mt-50 mb-22 px-4 overflow-visible' id='offers'>
+			<div className='relative mx-auto min-h-180 max-w-420 py-[8%] px-[15%] lg:min-h-230'>
+				<h2 className='absolute inline-block text-head text-8xl font-bold  max-w-140 z-1 -top-20 left-23'>
+					<p
+						key={activeOffer?.id}
+						className='offers-title-animated inline-block'
+					>
 						{activeOffer?.title}
-					</span>
+					</p>
 				</h2>
 				<img
 					src={thrillFrame}
@@ -23,7 +28,7 @@ const OffersSection = () => {
 					className='pointer-events-none absolute inset-0 h-full w-full select-none object-fill opacity-100 mix-blend-multiply'
 				/>
 
-				<div className='relative z-10 min-h-180 mx-20 sm:min-h-130 lg:min-h-145'>
+				<div className='relative z-10 mx-20 sm:min-h-130 lg:min-h-145'>
 					<OffersCarousel
 						offers={offers}
 						activeIndex={activeIndex}

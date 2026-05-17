@@ -1,4 +1,5 @@
-import { AppButton } from '@/components/ui/AppButton'
+import { AppButton } from '@/components/ui/appButton/AppButton'
+
 import ticketImage from '@/assets/images/ticket.png'
 
 import type { RepeatVisitOffer } from '@/data/offers'

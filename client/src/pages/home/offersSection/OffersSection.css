@@ -1,0 +1,23 @@
+@reference '@/global.css';
+@layer components {
+	.offers-title-animated {
+		animation: offerTitleIn 420ms ease;
+	}
+}
+
+@keyframes offerTitleIn {
+	from {
+		opacity: 0;
+		transform: translateY(12px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.offers-title-animated {
+		animation: none;
+	}
+}
